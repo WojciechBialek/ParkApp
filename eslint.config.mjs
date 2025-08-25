@@ -25,7 +25,6 @@ const eslintConfig = [
       'next-env.d.ts',
     ],
   },
-  ...compat.extends('airbnb'),
   {
     plugins: {
       formatjs,

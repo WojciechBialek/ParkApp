@@ -12,6 +12,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-family-poppins: var(--font-poppins);
+  --font-family-lato: var(--font-lato);
+  --font-family-dm-sans: var(--font-dm-sans);
 }
 
 @media (prefers-color-scheme: dark) {

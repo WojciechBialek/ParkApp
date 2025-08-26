@@ -10,8 +10,8 @@ export const PageHeader = ({
 }) => {
   return (
     <header
-      className="w-full flex items-start px-4 pt-[50px] pb-4 rounded-b-2xl relative overflow-hidden" 
-      style={{ 
+      className="w-full flex items-start px-4 pt-[50px] pb-4 mb-[80px] rounded-b-2xl relative overflow-hidden"
+      style={{
         background: 'linear-gradient(to top, #FADF99, #FFB034)',
         color: 'var(--primary-blue)',
         height: '280px',

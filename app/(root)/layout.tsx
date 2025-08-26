@@ -8,12 +8,17 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="">
+    <div           
+      style={{
+        color: 'var(--primary-blue)',
+        fontFamily: 'var(--font-dm-sans)',
+      }}
+    >
       <PageHeader
         backUrl="/"
         headerHeadline="Otwórz bramę"
       />
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">{children}</main>
+      <main className="">{children}</main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -28,7 +33,6 @@ export default function HomeLayout({
             width={15}
             height={21}
           />
-          Learn
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -43,7 +47,6 @@ export default function HomeLayout({
             width={16}
             height={16}
           />
-          Examples
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -58,7 +61,6 @@ export default function HomeLayout({
             width={16}
             height={16}
           />
-          Go to nextjs.org →
         </a>
       </footer>
     </div>

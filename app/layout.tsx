@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import {
-  Geist, Geist_Mono, Poppins,
+  DM_Sans, Geist, Geist_Mono, Lato, Poppins,
 } from 'next/font/google';
 
 import './globals.css';
@@ -11,9 +11,36 @@ const geistSans = Geist({
   variable: '--font-geist-sans',
 });
 
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  weight: [
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+  ],
+});
+
 const geistMono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  variable: '--font-lato',
+  weight: [
+    '300',
+    '400',
+    '700',
+    '900',
+  ],
 });
 
 const poppins = Poppins({
@@ -41,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${dmSans.variable} ${geistMono.variable} ${lato.variable} ${poppins.variable} antialiased`}
       >
         <ApolloWrapper>
           {children}

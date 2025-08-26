@@ -19,7 +19,7 @@ export default function HomeLayout({
         headerHeadline="Otwórz bramę"
       />
       <main className="">{children}</main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-between px-[24px] py-[16px] mt-[16px]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -28,10 +28,10 @@ export default function HomeLayout({
         >
           <Image
             aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={15}
-            height={21}
+            src="/icons/footer-icon.svg"
+            alt="Globe icon"
+            width={24}
+            height={29}
           />
         </a>
         <a
@@ -42,10 +42,10 @@ export default function HomeLayout({
         >
           <Image
             aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/icons/footer-icon.svg"
+            alt="Globe icon"
+            width={24}
+            height={29}
           />
         </a>
         <a
@@ -56,10 +56,24 @@ export default function HomeLayout({
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src="/icons/footer-icon.svg"
             alt="Globe icon"
-            width={16}
-            height={16}
+            width={24}
+            height={29}
+          />
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/icons/footer-icon.svg"
+            alt="Globe icon"
+            width={24}
+            height={29}
           />
         </a>
       </footer>

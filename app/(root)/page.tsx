@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 import { pilots } from '../mockedData';
@@ -8,6 +12,7 @@ import { Button } from '../components/Button/Button';
 import { PilotPagination } from './PilotPagination/PilotPagination';
 
 export default function Home() {
+  const router = useRouter();
   const [
     currentPilot,
     setCurrentPilot,
@@ -16,6 +21,25 @@ export default function Home() {
     activeButton,
     setActiveButton,
   ] = useState(pilots[0]?.buttons[0]?.id);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+      router.push('/login');
+    }
+  }, [router]);
+
+  if (!localStorage.getItem('token')) {
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-2 text-gray-600">Ładowanie...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

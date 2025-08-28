@@ -44,7 +44,7 @@ export default function Login() {
   ] = useState<Array<string>>([]);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage?.getItem('token');
     
     if (token) {
       router.push('/');

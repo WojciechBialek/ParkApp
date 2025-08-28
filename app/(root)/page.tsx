@@ -14,6 +14,10 @@ import { PilotPagination } from './PilotPagination/PilotPagination';
 export default function Home() {
   const router = useRouter();
   const [
+    isLoading,
+    setIsLoading,
+  ] = useState(true);
+  const [
     currentPilot,
     setCurrentPilot,
   ] = useState(0);
@@ -23,14 +27,16 @@ export default function Home() {
   ] = useState(pilots[0]?.buttons[0]?.id);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage?.getItem('token');
     
     if (!token) {
       router.push('/login');
+    } else {
+      setIsLoading(false);
     }
   }, [router]);
 
-  if (!localStorage.getItem('token')) {
+  if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
         <div className="text-center">
